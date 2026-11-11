@@ -324,7 +324,7 @@ body.menu-open { overflow: hidden; }
 .hero__arch-line path { fill: none; stroke: var(--gold); stroke-width: 1; opacity: 0.6; stroke-dasharray: 1; stroke-dashoffset: 0; }
 
 .hero__status {
-  position: absolute; top: 56%; left: -0.75rem; white-space: nowrap;
+  position: absolute; top: 60%; left: -0.75rem; white-space: nowrap;
   display: inline-flex; align-items: center; gap: 0.6rem;
   padding: 0.6rem 0.95rem; border-radius: var(--radius-pill);
   background: rgba(10, 22, 40, 0.88); border: 1px solid var(--line);
@@ -379,7 +379,7 @@ body.menu-open { overflow: hidden; }
 .carriers__track {
   display: flex; align-items: center; flex: none;
   gap: clamp(2.75rem, 6vw, 4.5rem); padding-right: clamp(2.75rem, 6vw, 4.5rem);
-  animation: marquee 48s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 .carriers:hover .carriers__track, .carriers:focus-within .carriers__track, .carriers.is-paused .carriers__track { animation-play-state: paused; }
 @keyframes marquee { to { transform: translateX(-100%); } }

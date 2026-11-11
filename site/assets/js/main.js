@@ -437,6 +437,39 @@
   });
 
   /* =========================================================
+     Contadores de estadísticas al entrar en pantalla
+     ========================================================= */
+  var counters = $$('[data-count]');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (counters.length && !reduceMotion) {
+    var animateCounter = function (el) {
+      var target = Number(el.dataset.count);
+      var start = performance.now();
+      var duration = 1600;
+      el.textContent = '0';
+      var tick = function (now) {
+        var progress = Math.min((now - start) / duration, 1);
+        el.textContent = String(Math.round(target * (1 - Math.pow(1 - progress, 2))));
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+
+    if ('IntersectionObserver' in window) {
+      var countIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          countIO.unobserve(en.target);
+          animateCounter(en.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      counters.forEach(function (el) { countIO.observe(el); });
+    } else {
+      counters.forEach(animateCounter);
+    }
+  }
+
+  /* =========================================================
      Animación (GSAP + ScrollTrigger + Lenis)
      ========================================================= */
   var gsap = window.gsap;
@@ -499,20 +532,6 @@
     reveals.forEach(function (el) { revealIO.observe(el); });
   } else {
     doc.classList.add('motion-failed');
-  }
-
-  // Contadores
-  var counters = $$('[data-count]');
-  if (counters.length && 'IntersectionObserver' in window) {
-    var countIO = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        countIO.unobserve(en.target);
-        var el = en.target, obj = { v: 0 };
-        gsap.to(obj, { v: +el.dataset.count, duration: 1.6, ease: 'power2.out', onUpdate: function () { el.textContent = Math.round(obj.v); } });
-      });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    counters.forEach(function (el) { el.textContent = '0'; countIO.observe(el); });
   }
 
   // Recalcular tras cargar fuentes e imágenes
