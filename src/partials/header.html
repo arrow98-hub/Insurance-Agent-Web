@@ -1,0 +1,45 @@
+  <a class="skip-link" href="#contenido">{{a11y.skip}}</a>
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="{{home}}#inicio" aria-label="{{a11y.home}}">
+        <img class="brand__mark" src="{{base}}assets/brand/logo-96.webp" width="44" height="38" alt="">
+        <span class="brand__text">
+          <span class="brand__name">Bernardo Castro</span>
+          <span class="brand__team">Nexus Diamond Team</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="{{a11y.mainNav}}" id="site-nav" data-nav>
+        <ul class="site-nav__list" role="list">
+          <li><a href="{{home}}#seguros">{{nav.seguros}}</a></li>
+          <li><a href="{{home}}#por-que">{{nav.porque}}</a></li>
+          <li><a href="{{home}}#equipo">{{nav.equipo}}</a></li>
+          <li><a href="{{home}}#testimonios">{{nav.testimonios}}</a></li>
+          <li><a href="{{home}}#preguntas">{{nav.faq}}</a></li>
+          <li><a href="{{home}}#contacto">{{nav.contacto}}</a></li>
+        </ul>
+        <div class="site-nav__mobile-actions">
+          <a class="btn btn--gold" href="tel:{{data.phone}}" data-track="call">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>{{nav.call}} · {{data.phoneDisplay}}
+          </a>
+          <a class="btn btn--ghost" href="https://wa.me/{{data.whatsapp}}?text={{waText}}" target="_blank" rel="noopener" data-track="whatsapp">
+            <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>{{nav.whatsapp}}
+          </a>
+        </div>
+      </nav>
+      <div class="site-header__actions">
+        <a class="lang-switch" href="{{altHref}}" hreflang="{{alt.lang}}" lang="{{alt.lang}}" aria-label="{{a11y.langSwitch}}">
+          <span aria-hidden="true" class="lang-switch__current">{{langLabel}}</span>
+          <span aria-hidden="true" class="lang-switch__sep"></span>
+          <span aria-hidden="true">{{alt.label}}</span>
+        </a>
+        <a class="btn btn--ghost btn--sm header-call" href="tel:{{data.phone}}" data-track="call">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>{{nav.call}}</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+                data-menu-toggle data-label-open="{{a11y.menuOpen}}" data-label-close="{{a11y.menuClose}}">
+          <span class="visually-hidden" data-menu-label>{{a11y.menuOpen}}</span>
+          <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>

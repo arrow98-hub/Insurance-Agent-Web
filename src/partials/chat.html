@@ -1,0 +1,27 @@
+  <div class="chat" data-chat data-i18n='{{chatJson}}' data-wa="https://wa.me/{{data.whatsapp}}?text={{waText}}" data-tel="tel:{{data.phone}}" data-quote="{{home}}#cotizar">
+    <button class="chat__launcher" type="button" aria-expanded="false" aria-controls="chat-panel" data-chat-toggle>
+      <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+      <span class="chat__launcher-label">{{chat.launcher}}</span>
+    </button>
+    <section class="chat__panel" id="chat-panel" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden data-chat-panel>
+      <header class="chat__head">
+        <img class="chat__avatar" src="{{base}}assets/img/bernardo-retrato-560.webp" width="40" height="40" alt="" loading="lazy">
+        <div>
+          <h2 class="chat__title" id="chat-title">{{chat.title}}</h2>
+          <p class="chat__subtitle">{{chat.subtitle}}</p>
+        </div>
+        <button class="chat__close" type="button" aria-label="{{chat.close}}" data-chat-close>
+          <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </header>
+      <div class="chat__log" role="log" aria-live="polite" data-chat-log data-lenis-prevent></div>
+      <form class="chat__form" data-chat-form>
+        <label class="visually-hidden" for="chat-input">{{chat.placeholder}}</label>
+        <input class="chat__input" id="chat-input" name="message" type="text" autocomplete="off" maxlength="500" placeholder="{{chat.placeholder}}" required>
+        <button class="chat__send" type="submit" aria-label="{{chat.send}}">
+          <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+        </button>
+      </form>
+      <p class="chat__disclaimer">{{chat.disclaimer}}</p>
+    </section>
+  </div>

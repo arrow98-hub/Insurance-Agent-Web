@@ -1,0 +1,306 @@
+{
+  "lang": "en",
+  "locale": "en_US",
+  "meta": {
+    "title": "Bernardo Castro · Insurance Agent in Orlando, FL | Nexus Diamond Team",
+    "description": "Health, life and Medicare insurance for families across the U.S. Bilingual guidance and a free quote with Bernardo Castro, Nexus Diamond Team.",
+    "ogAlt": "Bernardo Castro, insurance agent at Nexus Diamond Team"
+  },
+  "pages": {
+    "home": {
+      "path": "/en/",
+      "alt": "/"
+    },
+    "privacy": {
+      "path": "/en/privacy/",
+      "alt": "/privacidad/",
+      "title": "Privacy Policy | Nexus Diamond Team",
+      "description": "How Nexus Diamond Team collects, uses and protects your personal information."
+    },
+    "terms": {
+      "path": "/en/terms/",
+      "alt": "/terminos/",
+      "title": "Terms of Use | Nexus Diamond Team",
+      "description": "Terms and conditions for using the Nexus Diamond Team website."
+    }
+  },
+  "alt": {
+    "lang": "es",
+    "label": "ES"
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "Nexus Diamond Team, home",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "mainNav": "Main navigation",
+    "langSwitch": "Ver esta página en español",
+    "pause": "Pause the logo carousel",
+    "play": "Resume the logo carousel",
+    "carriers": "Insurance carriers we work with",
+    "prev": "Previous",
+    "next": "Next",
+    "carousel": "Types of insurance",
+    "slideOf": "{n} of {t}",
+    "social": "Social media",
+    "newTab": "(opens in a new tab)"
+  },
+  "nav": {
+    "seguros": "Insurance",
+    "porque": "Why me",
+    "equipo": "Join the team",
+    "testimonios": "Testimonials",
+    "faq": "FAQ",
+    "contacto": "Contact",
+    "call": "Call me",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "title": "<span class=\"line\"><span>Protect what</span></span><span class=\"line\"><span>you <em>love</em> most.</span></span>",
+    "lead": "I help you choose the health, life or Medicare coverage your family needs. In English or Spanish, at your pace, with no obligation.",
+    "ctaQuote": "Get a free quote",
+    "ctaCall": "Call me",
+    "ctaWa": "or message me on WhatsApp",
+    "trust1": "insurance carriers",
+    "trust2": "Bilingual service",
+    "trust3": "Free quote",
+    "name": "Bernardo Castro",
+    "role": "Nexus Diamond Team",
+    "hoursFallback": "Mon–Fri 8–7 · Sat 9–1",
+    "photoAlt": "Bernardo Castro smiling, wearing a navy blazer",
+    "carriersLabel": "We work with"
+  },
+  "seguros": {
+    "eyebrow": "Insurance",
+    "title": "Coverage for every <em>stage</em> of your life.",
+    "lead": "I compare options from several carriers and explain each one clearly, so you can choose with peace of mind.",
+    "carriersLabel": "Carriers",
+    "cards": [
+      {
+        "id": "salud",
+        "tag": "Marketplace · ACA",
+        "title": "Health insurance",
+        "text": "Individual and family plans from the Health Insurance Marketplace, with possible financial help based on your income.",
+        "points": [
+          "Doctor visits, hospital and prescriptions, depending on the plan",
+          "Preventive care",
+          "Help with your application and financial assistance"
+        ],
+        "cta": "Quote health insurance",
+        "interest": "salud"
+      },
+      {
+        "id": "vida",
+        "tag": "Family protection",
+        "title": "Life insurance",
+        "text": "Financial support so your family can stay on solid ground if you're no longer there.",
+        "points": [
+          "Term: coverage for 10, 20 or 30 years",
+          "Final expense: funeral costs and small debts",
+          "IUL: protection that builds cash value"
+        ],
+        "cta": "Quote life insurance",
+        "interest": "vida"
+      },
+      {
+        "id": "medicare",
+        "tag": "Age 65 and over",
+        "title": "Medicare",
+        "text": "Guidance to choose or change your plan when you turn 65, or if you qualify for other reasons.",
+        "points": [
+          "Medicare Advantage",
+          "Supplement plans",
+          "Prescription drug plans (Part D)"
+        ],
+        "noCarriers": "I'll show you the plans I represent in your area.",
+        "cta": "Talk about Medicare",
+        "interest": "medicare"
+      }
+    ],
+    "extra": "Already have health insurance? I can also help with <strong>dental and vision</strong> plans as a complement.",
+    "extraLink": "Ask me"
+  },
+  "porque": {
+    "eyebrow": "Why choose me",
+    "title": "Clarity at every step, <em>no pressure</em>.",
+    "text": "I'm here to help you find the insurance plan that truly fits you. I explain every option clearly and guide you through the whole process, without pressure or complications. I have the experience and the backing of several carriers to offer you reliable, personalized solutions.",
+    "stats": {
+      "families": "Families protected",
+      "years": "Years of experience",
+      "states": "States I serve",
+      "agents": "Agents trained"
+    },
+    "licenseLabel": "License",
+    "signatureRole": "Insurance agent · Nexus Diamond Team",
+    "cta": "Talk to me",
+    "photoAlt": "Bernardo Castro explaining insurance options to a client in his office"
+  },
+  "equipo": {
+    "eyebrow": "Join the team",
+    "title": "Build your insurance career with <em>real</em> support.",
+    "text": "Join our team and grow your career in the insurance industry. Get training, mentorship and digital tools to grow with confidence and help more people.",
+    "items": [
+      {
+        "title": "Training",
+        "text": "Hands-on training so you start with a solid foundation."
+      },
+      {
+        "title": "Mentorship",
+        "text": "You won't be on your own while you gain experience with real clients."
+      },
+      {
+        "title": "Digital tools",
+        "text": "Resources to organize your work and grow your book of business."
+      }
+    ],
+    "proof": "agents already trained",
+    "formTitle": "Apply to join",
+    "formLead": "Bernardo reviews every application and will contact you personally.",
+    "licenseQ": "Do you have an insurance license?",
+    "licenseYes": "Yes",
+    "licenseNo": "No",
+    "licenseProgress": "In progress",
+    "messagePh": "Tell me a little about yourself",
+    "submit": "Send application",
+    "photoAlt": "Bernardo Castro in his office"
+  },
+  "testimonios": {
+    "eyebrow": "Testimonials",
+    "title": "What people who <em>trusted</em> me say.",
+    "insurance": "Insurance",
+    "disclaimer": "Individual client experiences. Options, costs and results vary in each case."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Clear <em>answers</em>.",
+    "aside": "Have another question? Message me and I'll answer personally.",
+    "items": [
+      {
+        "q": "What does health insurance cover?",
+        "a": "<p>It covers medical and hospital expenses, doctor visits, prescriptions and tests, depending on the plan you choose. Some plans also include preventive care. It gives you financial support when you need to take care of your health.</p>"
+      },
+      {
+        "q": "What is supplemental insurance?",
+        "a": "<p>It's additional coverage that complements your main insurance and gives you financial support for medical expenses or specific situations that aren't fully covered. It can reduce your out-of-pocket costs and give you more protection.</p>"
+      },
+      {
+        "q": "What is life insurance and why should I have it?",
+        "a": "<p>Life insurance is a financial protection tool that lets your loved ones receive financial support if you pass away. It's a way to protect your family, help keep them financially stable and give them peace of mind for the future.</p>"
+      },
+      {
+        "q": "What types of life insurance are there?",
+        "a": "<h3>Term life</h3><p>Provides coverage for a specific period, usually 10, 20 or 30 years. If the insured person passes away during that term, the beneficiaries receive the amount set in the policy. It's usually more affordable than other types of life insurance.</p><h3>Final expense</h3><p>Designed to help cover funeral costs, cremation, small debts or final medical expenses. These are lower-amount policies, generally affordable and with permanent coverage.</p><h3>IUL (Indexed Universal Life)</h3><p>Permanent life insurance that combines protection with a savings component whose growth is linked to certain market indexes. It lets you build cash value that you may be able to use during your lifetime, according to the policy terms.</p>"
+      }
+    ]
+  },
+  "contacto": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about what you <em>need</em>.",
+    "lead": "Leave your details and I'll contact you personally to review your options. Free and with no obligation.",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "whatsappCta": "Message me",
+    "email": "Email",
+    "office": "Office",
+    "hours": "Hours",
+    "hoursText": "Monday to Friday: 8:00 AM – 7:00 PM<br>Saturday: 9:00 AM – 1:00 PM<br>Sunday: closed",
+    "mapLoad": "Show on map",
+    "mapNote": "Opening the map will load content from Google.",
+    "mapTitle": "Map of the Orlando office",
+    "directions": "Get directions",
+    "formTitle": "Request your quote",
+    "interest": "What are you interested in?",
+    "interestPh": "Choose an option",
+    "interestOptions": {
+      "salud": "Health insurance",
+      "vida": "Life insurance",
+      "medicare": "Medicare",
+      "dental": "Dental and vision",
+      "otro": "Something else"
+    },
+    "messagePh": "Anything I should know?",
+    "submit": "Request a free quote"
+  },
+  "form": {
+    "name": "Full name",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message",
+    "required": "required",
+    "optional": "optional",
+    "consent": "I agree that Bernardo Castro and Nexus Diamond Team may contact me by phone call, text message (SMS), WhatsApp or email at the number and address I provided, including through automated systems, to give me information about insurance. My consent is not a condition of purchase. Message and data rates may apply. I can opt out at any time by replying STOP.",
+    "consentLink": "Privacy Policy",
+    "errName": "Enter your name.",
+    "errPhone": "Enter a 10-digit phone number.",
+    "errEmail": "Enter a valid email, for example name@email.com.",
+    "errSelect": "Choose an option.",
+    "errConsent": "We need your permission to contact you.",
+    "errSummary": "Please review the highlighted fields.",
+    "sending": "Sending…",
+    "successTitle": "Thank you, {name}.",
+    "successText": "I received your details. I'll contact you personally very soon.",
+    "failTitle": "We couldn't send your request.",
+    "failText": "Call me at {phone} or message me on WhatsApp and I'll help you right away."
+  },
+  "cta": {
+    "title": "Peace of mind starts with a <em>conversation</em>.",
+    "text": "Tell me what you need and we'll compare options together."
+  },
+  "footer": {
+    "blurb": "Health, life and Medicare insurance guidance for families, from Orlando to the rest of the United States.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "followTitle": "Follow me",
+    "rights": "All rights reserved.",
+    "license": "License",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "disclaimer": "The information on this site is general and is not legal or tax advice. Coverage, pricing and eligibility depend on each carrier and your situation.",
+    "medicareGov": "Not connected with or endorsed by the U.S. government or the federal Medicare program.",
+    "tpmo": "We do not offer every plan available in your area. Currently we represent <mark class=\"legal-field\">[#]</mark> organizations which offer <mark class=\"legal-field\">[#]</mark> products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options."
+  },
+  "chat": {
+    "launcher": "Have questions?",
+    "title": "Bernardo's assistant",
+    "subtitle": "General insurance questions",
+    "close": "Close chat",
+    "greeting": "Hi, I'm Bernardo's assistant. How can I help you today?",
+    "quick": [
+      "I want a quote",
+      "What does health insurance cover?",
+      "Talk to Bernardo"
+    ],
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "typing": "Typing…",
+    "offline": "The assistant is still being set up. For immediate help, call Bernardo or message him on WhatsApp.",
+    "quoteReply": "Happy to help. Fill out the quote form and Bernardo will contact you personally.",
+    "quoteBtn": "Go to the form",
+    "callBtn": "Call",
+    "waBtn": "WhatsApp",
+    "error": "I couldn't answer right now. You can call or message on WhatsApp.",
+    "disclaimer": "Automated, informational answers. They don't replace advice from an agent."
+  },
+  "wa": "Hi Bernardo, I'd like information about insurance.",
+  "status": {
+    "open": "Available now",
+    "until": "until {t}",
+    "closed": "Outside office hours",
+    "opens": "opens {d} at {t}",
+    "today": "today",
+    "tomorrow": "tomorrow",
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ]
+  },
+  "legal": {
+    "back": "Back to home",
+    "draftNote": "Draft pending legal review. <mark class=\"legal-field\">Highlighted</mark> fields must be completed before publishing."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "domain": "https://nexusdiamondteam.com",
+  "year": "2026",
+  "phone": "+17867158880",
+  "phoneDisplay": "+1 (786) 715-8880",
+  "whatsapp": "17867158880",
+  "email": "info@nexusdiamondteam.com",
+  "license": "[LICENCIA PENDIENTE]",
+  "address": { "street": "7308 Greenbriar Pkwy", "city": "Orlando", "region": "FL", "zip": "32819", "country": "US" },
+  "mapsQuery": "7308 Greenbriar Pkwy, Orlando, FL 32819",
+  "hours": { "1": ["08:00", "19:00"], "2": ["08:00", "19:00"], "3": ["08:00", "19:00"], "4": ["08:00", "19:00"], "5": ["08:00", "19:00"], "6": ["09:00", "13:00"] },
+  "social": {
+    "instagram": "https://www.instagram.com/bernardoteprotege",
+    "tiktok": "https://www.tiktok.com/@bernardo_teprotege",
+    "facebook": "https://www.facebook.com/share/19u8vnKaFB/"
+  },
+  "carriers": [
+    { "id": "oscar", "name": "Oscar Health", "file": "oscar", "h": 24 },
+    { "id": "ambetter", "name": "Ambetter Health", "file": "ambetter", "h": 32 },
+    { "id": "floridablue", "name": "Florida Blue", "file": "florida-blue", "h": 26 },
+    { "id": "cigna", "name": "Cigna Healthcare", "file": "cigna", "h": 32 },
+    { "id": "uhc", "name": "UnitedHealthcare", "file": "unitedhealthcare", "h": 32 },
+    { "id": "molina", "name": "Molina Healthcare", "file": "molina", "h": 32 },
+    { "id": "fg", "name": "F&G Annuities & Life", "file": "fg", "h": 40 },
+    { "id": "marketplace", "name": "Marketplace · HealthCare.gov", "text": true }
+  ],
+  "insuranceCarriers": {
+    "salud": ["oscar", "ambetter", "floridablue", "cigna", "uhc", "molina", "marketplace"],
+    "vida": ["fg"],
+    "medicare": []
+  },
+  "stats": [
+    { "value": 200, "suffix": "+", "key": "families" },
+    { "value": 8, "suffix": "+", "key": "years" },
+    { "value": 49, "suffix": "", "key": "states" },
+    { "value": 20, "suffix": "+", "key": "agents" }
+  ],
+  "testimonials": [
+    { "name": "María R.", "city": "Kissimmee, Florida", "carrier": "Florida Blue", "lang": "es",
+      "text": "Estaba buscando un seguro que se ajustara a mis necesidades y no sabía muy bien por dónde empezar. Bernardo me ayudó a entender las opciones y encontrar una alternativa que se adaptara a mi situación. La experiencia fue mucho más sencilla de lo que esperaba." },
+    { "name": "James T.", "city": "Houston, Texas", "carrier": "UnitedHealthcare", "lang": "en",
+      "text": "I needed help understanding my health insurance options. The process was explained clearly, and I felt much more confident choosing a plan that worked for me and my family." },
+    { "name": "Carlos M.", "city": "Orlando, Florida", "carrier": "Ambetter Health", "lang": "es",
+      "text": "Siempre había tenido dudas sobre cómo elegir un seguro médico. Recibí orientación durante el proceso y pude entender mejor las diferentes opciones disponibles. Fue una experiencia muy positiva. Gracias, Bernardo." },
+    { "name": "Patricia L.", "city": "Chicago, Illinois", "carrier": "Cigna Healthcare", "lang": "es",
+      "text": "Me gustó mucho que Bernardo se tomara el tiempo para explicarme las opciones sin complicarme con tantos términos. Poder entender lo que estaba eligiendo me dio mucha tranquilidad." },
+    { "name": "Robert D.", "city": "Tampa, Florida", "carrier": "Oscar Health", "lang": "en",
+      "text": "Finding the right health coverage felt overwhelming at first. Having Mr. Castro walk me through the available options made the experience easier and helped me make a more informed decision." },
+    { "name": "Daniela G.", "city": "Dallas, Texas", "carrier": "Molina Healthcare", "lang": "es",
+      "text": "Tenía varias preguntas sobre la cobertura y los requisitos. El señor Bernardo me explicó todo con paciencia y pude encontrar una opción que se ajustaba mejor a lo que estaba buscando." }
+  ]
+}

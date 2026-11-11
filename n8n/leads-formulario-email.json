@@ -1,0 +1,205 @@
+{
+  "name": "NDT · Leads del sitio → email",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ndt-leads",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "https://nexusdiamondteam.com,https://www.nexusdiamondteam.com"
+        }
+      },
+      "id": "b1000000-0000-4000-8000-000000000001",
+      "name": "Webhook leads",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "ndt-leads-webhook"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Valida y normaliza el lead que llega desde el sitio (formulario o chatbot)\nconst b = $json.body || {};\nconst clean = (v, max = 500) => String(v ?? '').trim().slice(0, max);\nconst digits = (v) => String(v ?? '').replace(/\\D/g, '');\nconst html = (v) => String(v ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;').replace(/'/g, '&#39;');\n\nconst lead = {\n  origen: clean(b.origen, 30) || 'formulario',\n  formulario: clean(b.formulario, 30),\n  nombre: clean(b.nombre, 80),\n  telefono: digits(b.telefono).slice(-11),\n  email: clean(b.email, 120).toLowerCase(),\n  interes: clean(b.interes, 40),\n  licencia: clean(b.licencia, 20),\n  mensaje: clean(b.mensaje, 1500),\n  consentimiento: b.consentimiento === true,\n  consentimiento_texto: clean(b.consentimiento_texto, 1000),\n  idioma: clean(b.idioma, 5),\n  pagina: clean(b.pagina, 300),\n  fecha: clean(b.fecha, 40) || new Date().toISOString(),\n  utm_source: clean(b.utm?.utm_source, 100),\n  utm_medium: clean(b.utm?.utm_medium, 100),\n  utm_campaign: clean(b.utm?.utm_campaign, 100),\n  utm_term: clean(b.utm?.utm_term, 100),\n  utm_content: clean(b.utm?.utm_content, 100),\n  referrer: clean(b.utm?.referrer, 300),\n  ip: clean($json.headers?.['x-forwarded-for'], 60),\n  user_agent: clean($json.headers?.['user-agent'], 300),\n};\n\nconst telOk = lead.telefono.length === 10 || (lead.telefono.length === 11 && lead.telefono.startsWith('1'));\nconst emailOk = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/.test(lead.email);\nlead.valido = !b.empresa && lead.nombre.length >= 2 && telOk && emailOk && lead.consentimiento;\n\nconst etiquetas = { salud: 'Seguro de salud', vida: 'Seguro de vida', medicare: 'Medicare', dental: 'Dental y visión', otro: 'Otra consulta', equipo: 'Unirse al equipo' };\nlead.interes_texto = etiquetas[lead.interes] || lead.interes || '—';\nlead.telefono_formato = lead.telefono.length >= 10\n  ? `(${lead.telefono.slice(-10, -7)}) ${lead.telefono.slice(-7, -4)}-${lead.telefono.slice(-4)}`\n  : lead.telefono;\n\nlead.nombre_html = html(lead.nombre);\nlead.interes_texto_html = html(lead.interes_texto);\nlead.origen_html = html(lead.origen);\nlead.formulario_html = html(lead.formulario);\nlead.email_html = html(lead.email);\nlead.licencia_html = html(lead.licencia);\nlead.mensaje_html = html(lead.mensaje);\nlead.idioma_html = html(lead.idioma);\nlead.pagina_html = html(lead.pagina);\nlead.fecha_html = html(lead.fecha);\nlead.consentimiento_texto_html = html(lead.consentimiento_texto);\nlead.utm_source_html = html(lead.utm_source);\nlead.utm_medium_html = html(lead.utm_medium);\nlead.utm_campaign_html = html(lead.utm_campaign);\nlead.email_attr = html(lead.email);\nlead.nombre_subject = lead.nombre.replace(/[\\r\\n]+/g, ' ');\nlead.interes_subject = lead.interes_texto.replace(/[\\r\\n]+/g, ' ');\n\nreturn [{ json: lead }];"
+      },
+      "id": "b1000000-0000-4000-8000-000000000002",
+      "name": "Validar y limpiar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.valido }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "b1000000-0000-4000-8000-000000000003",
+      "name": "¿Lead válido?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "Sitio web <no-reply@nexusdiamondteam.com>",
+        "toEmail": "info@nexusdiamondteam.com",
+        "subject": "=Nuevo lead: {{ $json.nombre_subject }} · {{ $json.interes_subject }}",
+        "emailFormat": "html",
+        "html": "=<div style=\"font-family:Arial,sans-serif;max-width:560px;color:#0A1628\">\n<h2 style=\"margin:0 0 4px\">Nuevo lead: {{ $json.nombre_html }}</h2>\n<p style=\"margin:0 0 16px;color:#555\">{{ $json.interes_texto_html }} · desde {{ $json.origen_html }}{{ $json.formulario_html ? ' (' + $json.formulario_html + ')' : '' }}</p>\n<table cellpadding=\"6\" style=\"border-collapse:collapse;width:100%;font-size:14px\">\n<tr><td><b>Teléfono</b></td><td><a href=\"tel:+1{{ $json.telefono.slice(-10) }}\">{{ $json.telefono_formato }}</a></td></tr>\n<tr><td><b>WhatsApp</b></td><td><a href=\"https://wa.me/1{{ $json.telefono.slice(-10) }}\">Abrir chat</a></td></tr>\n<tr><td><b>Email</b></td><td><a href=\"mailto:{{ $json.email_attr }}\">{{ $json.email_html }}</a></td></tr>\n<tr><td><b>Interés</b></td><td>{{ $json.interes_texto_html }}</td></tr>\n{{ $json.licencia_html ? '<tr><td><b>Licencia</b></td><td>' + $json.licencia_html + '</td></tr>' : '' }}\n<tr><td><b>Mensaje</b></td><td>{{ $json.mensaje_html || '—' }}</td></tr>\n<tr><td><b>Idioma</b></td><td>{{ $json.idioma_html }}</td></tr>\n<tr><td><b>Página</b></td><td>{{ $json.pagina_html }}</td></tr>\n<tr><td><b>UTM</b></td><td>{{ [$json.utm_source_html, $json.utm_medium_html, $json.utm_campaign_html].filter(Boolean).join(' / ') || '—' }}</td></tr>\n<tr><td><b>Fecha</b></td><td>{{ $json.fecha_html }}</td></tr>\n</table>\n<p style=\"font-size:12px;color:#777;margin-top:16px\">Consentimiento TCPA: {{ $json.consentimiento ? 'Sí' : 'No' }}<br>{{ $json.consentimiento_texto_html }}</p>\n</div>",
+        "options": {
+          "replyTo": "={{ $json.email }}"
+        }
+      },
+      "id": "b1000000-0000-4000-8000-000000000004",
+      "name": "Aviso por email a Bernardo",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        720,
+        -100
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "REEMPLAZAR",
+          "name": "SMTP nexusdiamondteam"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={ \"ok\": true }",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "b1000000-0000-4000-8000-000000000005",
+      "name": "Responder OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        960,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={ \"ok\": false, \"error\": \"datos_invalidos\" }",
+        "options": {
+          "responseCode": 400
+        }
+      },
+      "id": "b1000000-0000-4000-8000-000000000006",
+      "name": "Responder 400",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        720,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Leads del sitio → email\n\n1. Conecta una credencial **SMTP** (Hostinger Email, Gmail, etc.) en el nodo de email.\n2. Activa el workflow y copia la **Production URL** del Webhook.\n3. Pégala en `site/assets/js/config.js` → `LEADS_WEBHOOK_URL` y vuelve a subir ese archivo.\n4. Prueba enviando el formulario del sitio.\n\n**CRM (más adelante):** agrega un nodo HubSpot o Supabase entre *¿Lead válido?* y el email. Los campos ya vienen limpios.\n\nEl chatbot también envía sus leads a este mismo webhook (origen = chatbot).\n\nRevisa tras importar: la versión de n8n puede pedir actualizar algún nodo.",
+        "height": 360,
+        "width": 420,
+        "color": 4
+      },
+      "id": "b1000000-0000-4000-8000-000000000007",
+      "name": "Nota",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -120
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook leads": {
+      "main": [
+        [
+          {
+            "node": "Validar y limpiar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar y limpiar": {
+      "main": [
+        [
+          {
+            "node": "¿Lead válido?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "¿Lead válido?": {
+      "main": [
+        [
+          {
+            "node": "Aviso por email a Bernardo",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Responder 400",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aviso por email a Bernardo": {
+      "main": [
+        [
+          {
+            "node": "Responder OK",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "tags": []
+}

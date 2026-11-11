@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{lang}}" class="no-js">
+<head>
+{{> head}}
+  <meta name="robots" content="noindex">
+</head>
+<body class="page-legal">
+{{> header}}
+
+  <main id="contenido" class="legal">
+    <div class="container legal__inner">
+      <a class="link legal__back" href="{{home}}"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>{{legal.back}}</a>
+      <p class="legal__draft" role="note">{{legal.draftNote}}</p>
+      <article class="legal__body">
+{{legalBody}}
+      </article>
+    </div>
+  </main>
+
+{{> footer}}
+{{> chat}}
+{{> icons}}
+{{> scripts}}
+</body>
+</html>

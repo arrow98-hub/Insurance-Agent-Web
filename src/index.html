@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="{{lang}}" class="no-js">
+<head>
+{{> head}}
+  <link rel="preload" href="{{base}}assets/img/bernardo-retrato-560.webp" as="image" type="image/webp"
+        imagesrcset="{{base}}assets/img/bernardo-retrato-560.webp 560w, {{base}}assets/img/bernardo-retrato-900.webp 900w"
+        imagesizes="(min-width: 960px) 416px, 80vw">
+  <script type="application/ld+json">{{schema}}</script>
+  <script type="application/ld+json">{{faqSchema}}</script>
+</head>
+<body class="page-home">
+{{> header}}
+
+  <main id="contenido">
+    <!-- ============ 1 · HERO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1 class="hero__title" id="hero-title">{{hero.title}}</h1>
+          <p class="hero__lead" data-hero-item>{{hero.lead}}</p>
+          <div class="hero__ctas" data-hero-item>
+            <a class="btn btn--gold btn--lg" href="#cotizar" data-track="cta_quote">
+              {{hero.ctaQuote}}<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="tel:{{data.phone}}" data-track="call">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>{{hero.ctaCall}}
+            </a>
+          </div>
+          <a class="hero__wa link" href="https://wa.me/{{data.whatsapp}}?text={{waText}}" target="_blank" rel="noopener" data-hero-item data-track="whatsapp">
+            <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>{{hero.ctaWa}}
+          </a>
+          <ul class="hero__trust" role="list" data-hero-item>
+            <li><span><strong>{{carrierCount}}</strong> {{hero.trust1}}</span></li>
+            <li><span>{{hero.trust2}}</span></li>
+            <li><span>{{hero.trust3}}</span></li>
+          </ul>
+        </div>
+
+        <figure class="hero__portrait" data-hero-portrait>
+          <svg class="hero__arch-line" viewBox="0 0 460 575" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M1 574 V230 A229 229 0 0 1 459 230 V574" pathLength="1"/>
+          </svg>
+          <div class="hero__frame">
+            <img src="{{base}}assets/img/bernardo-retrato-560.webp"
+                 srcset="{{base}}assets/img/bernardo-retrato-560.webp 560w, {{base}}assets/img/bernardo-retrato-900.webp 900w"
+                 sizes="(min-width: 960px) 416px, 80vw"
+                 width="900" height="1265" alt="{{hero.photoAlt}}" fetchpriority="high" decoding="async" data-hero-photo>
+          </div>
+          <div class="hero__status" data-status data-hours='{{hoursJson}}' data-i18n='{{statusJson}}'>
+            <span class="hero__status-dot" aria-hidden="true"></span>
+            <span data-status-text>{{hero.hoursFallback}}</span>
+          </div>
+          <figcaption class="hero__caption">
+            <span class="hero__caption-name">{{hero.name}}</span>
+            <span class="hero__caption-role">{{hero.role}}</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="carriers" data-carriers>
+        <div class="container carriers__head">
+          <p class="carriers__label">{{hero.carriersLabel}}</p>
+          <button class="carriers__toggle" type="button" aria-pressed="false" data-carriers-toggle
+                  data-label-pause="{{a11y.pause}}" data-label-play="{{a11y.play}}" aria-label="{{a11y.pause}}">
+            <svg class="icon icon--pause" aria-hidden="true"><use href="#i-pause"/></svg>
+            <svg class="icon icon--play" aria-hidden="true"><use href="#i-play"/></svg>
+          </button>
+        </div>
+        <div class="carriers__viewport">
+          <ul class="carriers__track" role="list" aria-label="{{a11y.carriers}}">
+            {{carriersList}}
+          </ul>
+          <ul class="carriers__track carriers__track--clone" role="list" aria-hidden="true">
+            {{carriersListClone}}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2 · SEGUROS ============ -->
+    <section class="section seguros" id="seguros" aria-labelledby="seguros-title">
+      <div class="container section-head section-head--split">
+        <div>
+          <p class="eyebrow" data-reveal>{{seguros.eyebrow}}</p>
+          <h2 class="h2" id="seguros-title" data-reveal>{{seguros.title}}</h2>
+        </div>
+        <div class="section-head__side">
+          <p class="lead" data-reveal>{{seguros.lead}}</p>
+          <div class="carousel-controls" data-reveal>
+            <button class="round-btn" type="button" data-carousel-prev aria-controls="seguros-track" aria-label="{{a11y.prev}}">
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+            </button>
+            <span class="carousel-progress" aria-hidden="true"><span data-carousel-bar></span></span>
+            <button class="round-btn" type="button" data-carousel-next aria-controls="seguros-track" aria-label="{{a11y.next}}">
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel" data-carousel data-slide-of="{{a11y.slideOf}}">
+        <ul class="carousel__track" id="seguros-track" role="list" aria-label="{{a11y.carousel}}" tabindex="0" data-carousel-track>
+          {{segurosCards}}
+        </ul>
+      </div>
+
+      <div class="container">
+        <p class="seguros__extra" data-reveal>
+          <span>{{seguros.extra}}</span>
+          <a class="link" href="#cotizar" data-interest="dental">{{seguros.extraLink}}<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 3 · POR QUÉ ELEGIRME ============ -->
+    <section class="section porque" id="por-que" aria-labelledby="porque-title">
+      <div class="container porque__grid">
+        <figure class="porque__media" data-reveal>
+          <img src="{{base}}assets/img/consulta-480.webp"
+               srcset="{{base}}assets/img/consulta-480.webp 480w, {{base}}assets/img/consulta-720.webp 720w"
+               sizes="(min-width: 960px) 420px, 88vw" width="720" height="1162" alt="{{porque.photoAlt}}" loading="lazy" decoding="async" data-parallax>
+        </figure>
+        <div class="porque__copy">
+          <p class="eyebrow" data-reveal>{{porque.eyebrow}}</p>
+          <h2 class="h2" id="porque-title" data-reveal>{{porque.title}}</h2>
+          <p class="porque__text" data-reveal>{{porque.text}}</p>
+          <div class="signature" data-reveal>
+            <p class="signature__name">Bernardo Castro</p>
+            <p class="signature__role">{{porque.signatureRole}}</p>
+          </div>
+          <p class="porque__license" data-reveal>{{porque.licenseLabel}}: <span class="pending">{{data.license}}</span></p>
+          <a class="btn btn--gold" href="#cotizar" data-reveal data-track="cta_porque">{{porque.cta}}<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="stats" role="list">
+          {{statsList}}
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 4 · ÚNETE AL EQUIPO ============ -->
+    <section class="section equipo" id="equipo" aria-labelledby="equipo-title">
+      <div class="container equipo__grid">
+        <div class="equipo__copy">
+          <p class="eyebrow" data-reveal>{{equipo.eyebrow}}</p>
+          <h2 class="h2" id="equipo-title" data-reveal>{{equipo.title}}</h2>
+          <p class="equipo__text" data-reveal>{{equipo.text}}</p>
+          <ul class="equipo__items" role="list">
+            {{equipoItems}}
+          </ul>
+          <figure class="equipo__media" data-reveal>
+            <img src="{{base}}assets/img/oficina-700.webp" srcset="{{base}}assets/img/oficina-700.webp 700w, {{base}}assets/img/oficina-1200.webp 1200w"
+                 sizes="(min-width: 960px) 560px, 88vw" width="1200" height="672" alt="{{equipo.photoAlt}}" loading="lazy" decoding="async">
+            <figcaption class="equipo__proof"><strong>20+</strong> {{equipo.proof}}</figcaption>
+          </figure>
+        </div>
+
+        <div class="form-card" data-reveal>
+          <h3 class="form-card__title">{{equipo.formTitle}}</h3>
+          <p class="form-card__lead">{{equipo.formLead}}</p>
+          <form class="lead-form" data-lead-form="equipo" novalidate>
+            <input type="hidden" name="interes" value="equipo">
+            {{fieldsBasicEquipo}}
+            <fieldset class="field field--choices" data-field>
+              <legend class="field__label">{{equipo.licenseQ}} <span class="field__req">({{form.required}})</span></legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="licencia" value="si" required><span>{{equipo.licenseYes}}</span></label>
+                <label class="choice"><input type="radio" name="licencia" value="no"><span>{{equipo.licenseNo}}</span></label>
+                <label class="choice"><input type="radio" name="licencia" value="en_proceso"><span>{{equipo.licenseProgress}}</span></label>
+              </div>
+              <p class="field__error" data-error="{{form.errSelect}}" hidden></p>
+            </fieldset>
+            <div class="field" data-field>
+              <label class="field__label" for="eq-mensaje">{{form.message}} <span class="field__opt">({{form.optional}})</span></label>
+              <textarea class="field__input" id="eq-mensaje" name="mensaje" rows="3" maxlength="1000" placeholder="{{equipo.messagePh}}"></textarea>
+            </div>
+            {{consentEquipo}}
+            {{honeypot}}
+            <button class="btn btn--gold btn--block" type="submit" data-submit><span data-submit-label>{{equipo.submit}}</span><svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <div class="form-status" role="status" aria-live="polite" tabindex="-1" data-form-status hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5 · TESTIMONIOS ============ -->
+    <section class="section testimonios" id="testimonios" aria-labelledby="testimonios-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>{{testimonios.eyebrow}}</p>
+          <h2 class="h2" id="testimonios-title" data-reveal>{{testimonios.title}}</h2>
+        </div>
+      </div>
+      <div class="testimonials-wrap">
+        <ul class="testimonials" role="list">
+          {{testimonialsList}}
+        </ul>
+      </div>
+      <div class="container">
+        <p class="testimonios__disclaimer" data-reveal>{{testimonios.disclaimer}}</p>
+      </div>
+    </section>
+
+    <!-- ============ 6 · PREGUNTAS FRECUENTES ============ -->
+    <section class="section faq" id="preguntas" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <div class="faq__intro">
+          <p class="eyebrow" data-reveal>{{faq.eyebrow}}</p>
+          <h2 class="h2" id="faq-title" data-reveal>{{faq.title}}</h2>
+          <p class="faq__aside" data-reveal>{{faq.aside}}</p>
+          <div class="faq__actions" data-reveal>
+            <a class="btn btn--ghost" href="https://wa.me/{{data.whatsapp}}?text={{waText}}" target="_blank" rel="noopener" data-track="whatsapp">
+              <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>{{nav.whatsapp}}
+            </a>
+            <a class="link" href="tel:{{data.phone}}" data-track="call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>{{data.phoneDisplay}}</a>
+          </div>
+        </div>
+        <div class="faq__list">
+          {{faqList}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7 · CONTACTO ============ -->
+    <section class="section contacto" id="contacto" aria-labelledby="contacto-title">
+      <div class="container contacto__grid">
+        <div class="contacto__info">
+          <p class="eyebrow" data-reveal>{{contacto.eyebrow}}</p>
+          <h2 class="h2" id="contacto-title" data-reveal>{{contacto.title}}</h2>
+          <p class="lead" data-reveal>{{contacto.lead}}</p>
+
+          <dl class="info-list" data-reveal>
+            <div class="info-list__row">
+              <dt><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>{{contacto.phone}}</dt>
+              <dd><a href="tel:{{data.phone}}" data-track="call">{{data.phoneDisplay}}</a></dd>
+            </div>
+            <div class="info-list__row">
+              <dt><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>{{contacto.whatsapp}}</dt>
+              <dd><a href="https://wa.me/{{data.whatsapp}}?text={{waText}}" target="_blank" rel="noopener" data-track="whatsapp">{{contacto.whatsappCta}}</a></dd>
+            </div>
+            <div class="info-list__row">
+              <dt><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>{{contacto.email}}</dt>
+              <dd><a href="mailto:{{data.email}}">{{data.email}}</a></dd>
+            </div>
+            <div class="info-list__row">
+              <dt><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>{{contacto.office}}</dt>
+              <dd>{{data.address.street}}, {{data.address.city}}, {{data.address.region}} {{data.address.zip}}</dd>
+            </div>
+            <div class="info-list__row">
+              <dt><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>{{contacto.hours}}</dt>
+              <dd>{{contacto.hoursText}}</dd>
+            </div>
+          </dl>
+
+          <div class="map" data-map data-src="https://www.google.com/maps?q={{mapsQ}}&amp;output=embed" data-title="{{contacto.mapTitle}}" data-reveal>
+            <div class="map__facade">
+              <svg class="map__pin icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <p class="map__address">{{data.address.street}}<br>{{data.address.city}}, {{data.address.region}} {{data.address.zip}}</p>
+              <div class="map__actions">
+                <button class="btn btn--ghost btn--sm" type="button" data-map-load>{{contacto.mapLoad}}</button>
+                <a class="link" href="https://www.google.com/maps/dir/?api=1&amp;destination={{mapsQ}}" target="_blank" rel="noopener">{{contacto.directions}}<span class="visually-hidden"> {{a11y.newTab}}</span></a>
+              </div>
+              <p class="map__note">{{contacto.mapNote}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card form-card--raised" id="cotizar" data-reveal>
+          <h3 class="form-card__title">{{contacto.formTitle}}</h3>
+          <form class="lead-form" data-lead-form="cotizacion" novalidate>
+            {{fieldsBasicContacto}}
+            <div class="field" data-field>
+              <label class="field__label" for="ct-interes">{{contacto.interest}} <span class="field__req">({{form.required}})</span></label>
+              <div class="select">
+                <select class="field__input" id="ct-interes" name="interes" required data-interest-select>
+                  <option value="" disabled selected>{{contacto.interestPh}}</option>
+                  {{interestOptions}}
+                </select>
+              </div>
+              <p class="field__error" id="ct-interes-err" data-error="{{form.errSelect}}" hidden></p>
+            </div>
+            <div class="field" data-field>
+              <label class="field__label" for="ct-mensaje">{{form.message}} <span class="field__opt">({{form.optional}})</span></label>
+              <textarea class="field__input" id="ct-mensaje" name="mensaje" rows="3" maxlength="1000" placeholder="{{contacto.messagePh}}"></textarea>
+            </div>
+            {{consentContacto}}
+            {{honeypot}}
+            <button class="btn btn--gold btn--lg btn--block" type="submit" data-submit><span data-submit-label>{{contacto.submit}}</span><svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <div class="form-status" role="status" aria-live="polite" tabindex="-1" data-form-status hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CIERRE ============ -->
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="container closing__inner">
+        <h2 class="h2 closing__title" id="closing-title" data-reveal>{{cta.title}}</h2>
+        <p class="closing__text" data-reveal>{{cta.text}}</p>
+        <div class="closing__actions" data-reveal>
+          <a class="btn btn--gold btn--lg" href="#cotizar" data-track="cta_closing">{{hero.ctaQuote}}<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost btn--lg" href="tel:{{data.phone}}" data-track="call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>{{data.phoneDisplay}}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+{{> footer}}
+{{> chat}}
+{{> icons}}
+{{> scripts}}
+  <script type="application/json" id="form-i18n">{{formJson}}</script>
+</body>
+</html>

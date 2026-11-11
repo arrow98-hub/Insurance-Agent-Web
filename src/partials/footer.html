@@ -1,0 +1,57 @@
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="{{home}}#inicio" aria-label="{{a11y.home}}">
+            <img class="brand__mark" src="{{base}}assets/brand/logo-96.webp" width="44" height="38" alt="" loading="lazy">
+            <span class="brand__text">
+              <span class="brand__name">Bernardo Castro</span>
+              <span class="brand__team">Nexus Diamond Team</span>
+            </span>
+          </a>
+          <p class="footer__blurb">{{footer.blurb}}</p>
+          <ul class="social" role="list" aria-label="{{a11y.social}}">
+            <li><a href="{{data.social.instagram}}" target="_blank" rel="noopener" aria-label="Instagram {{a11y.newTab}}"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+            <li><a href="{{data.social.tiktok}}" target="_blank" rel="noopener" aria-label="TikTok {{a11y.newTab}}"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+            <li><a href="{{data.social.facebook}}" target="_blank" rel="noopener" aria-label="Facebook {{a11y.newTab}}"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          </ul>
+        </div>
+        <nav class="footer__col" aria-label="{{footer.navTitle}}">
+          <h2 class="footer__title">{{footer.navTitle}}</h2>
+          <ul role="list">
+            <li><a href="{{home}}#seguros">{{nav.seguros}}</a></li>
+            <li><a href="{{home}}#por-que">{{nav.porque}}</a></li>
+            <li><a href="{{home}}#equipo">{{nav.equipo}}</a></li>
+            <li><a href="{{home}}#testimonios">{{nav.testimonios}}</a></li>
+            <li><a href="{{home}}#preguntas">{{nav.faq}}</a></li>
+            <li><a href="{{home}}#contacto">{{nav.contacto}}</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <h2 class="footer__title">{{footer.contactTitle}}</h2>
+          <ul role="list">
+            <li><a href="tel:{{data.phone}}" data-track="call">{{data.phoneDisplay}}</a></li>
+            <li><a href="https://wa.me/{{data.whatsapp}}?text={{waText}}" target="_blank" rel="noopener" data-track="whatsapp">WhatsApp</a></li>
+            <li><a href="mailto:{{data.email}}">{{data.email}}</a></li>
+            <li class="footer__address">{{data.address.street}}<br>{{data.address.city}}, {{data.address.region}} {{data.address.zip}}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <p class="footer__license">{{footer.license}}: <span class="pending">{{data.license}}</span></p>
+        <div class="footer__fine">
+          <p>{{footer.disclaimer}}</p>
+          <p>{{footer.medicareGov}}</p>
+          <p>{{footer.tpmo}}</p>
+        </div>
+        <div class="footer__bottom">
+          <p>© {{data.year}} Nexus Diamond Team. {{footer.rights}}</p>
+          <ul role="list" class="footer__links">
+            <li><a href="{{privacyHref}}">{{footer.privacy}}</a></li>
+            <li><a href="{{termsHref}}">{{footer.terms}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>

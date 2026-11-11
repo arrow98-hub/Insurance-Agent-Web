@@ -1,0 +1,306 @@
+{
+  "lang": "es",
+  "locale": "es_US",
+  "meta": {
+    "title": "Bernardo Castro · Agente de seguros en Orlando, FL | Nexus Diamond Team",
+    "description": "Seguros de salud, vida y Medicare para familias hispanas. Asesoría en español y cotización sin costo con Bernardo Castro, Nexus Diamond Team.",
+    "ogAlt": "Bernardo Castro, agente de seguros de Nexus Diamond Team"
+  },
+  "pages": {
+    "home": {
+      "path": "/",
+      "alt": "/en/"
+    },
+    "privacy": {
+      "path": "/privacidad/",
+      "alt": "/en/privacy/",
+      "title": "Política de privacidad | Nexus Diamond Team",
+      "description": "Cómo Nexus Diamond Team recopila, usa y protege tus datos personales."
+    },
+    "terms": {
+      "path": "/terminos/",
+      "alt": "/en/terms/",
+      "title": "Términos de uso | Nexus Diamond Team",
+      "description": "Términos y condiciones de uso del sitio de Nexus Diamond Team."
+    }
+  },
+  "alt": {
+    "lang": "en",
+    "label": "EN"
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "home": "Nexus Diamond Team, inicio",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú",
+    "mainNav": "Navegación principal",
+    "langSwitch": "Ver esta página en inglés",
+    "pause": "Pausar el desplazamiento de logos",
+    "play": "Reanudar el desplazamiento de logos",
+    "carriers": "Aseguradoras con las que trabajamos",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "carousel": "Tipos de seguro",
+    "slideOf": "{n} de {t}",
+    "social": "Redes sociales",
+    "newTab": "(se abre en una pestaña nueva)"
+  },
+  "nav": {
+    "seguros": "Seguros",
+    "porque": "Por qué yo",
+    "equipo": "Únete al equipo",
+    "testimonios": "Testimonios",
+    "faq": "Preguntas",
+    "contacto": "Contacto",
+    "call": "Llámame",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "title": "<span class=\"line\"><span>Protege lo que</span></span><span class=\"line\"><span>más <em>quieres</em>.</span></span>",
+    "lead": "Te ayudo a elegir el seguro de salud, vida o Medicare que tu familia necesita. En español, con calma y sin compromiso.",
+    "ctaQuote": "Cotiza gratis",
+    "ctaCall": "Llámame",
+    "ctaWa": "o escríbeme por WhatsApp",
+    "trust1": "aseguradoras",
+    "trust2": "Atención en español e inglés",
+    "trust3": "Cotización sin costo",
+    "name": "Bernardo Castro",
+    "role": "Nexus Diamond Team",
+    "hoursFallback": "Lun–Vie 8–7 · Sáb 9–1",
+    "photoAlt": "Bernardo Castro sonriendo, con saco azul marino",
+    "carriersLabel": "Trabajamos con"
+  },
+  "seguros": {
+    "eyebrow": "Seguros",
+    "title": "Coberturas para cada <em>etapa</em> de tu vida.",
+    "lead": "Comparo opciones de varias aseguradoras y te explico cada una con claridad, para que elijas con tranquilidad.",
+    "carriersLabel": "Aseguradoras",
+    "cards": [
+      {
+        "id": "salud",
+        "tag": "Marketplace · ACA",
+        "title": "Seguro de salud",
+        "text": "Planes individuales y familiares del mercado de seguros, con posible ayuda financiera según tus ingresos.",
+        "points": [
+          "Consultas, hospital y medicamentos según el plan",
+          "Atención preventiva",
+          "Te acompaño en la solicitud y la ayuda financiera"
+        ],
+        "cta": "Cotizar seguro de salud",
+        "interest": "salud"
+      },
+      {
+        "id": "vida",
+        "tag": "Protección familiar",
+        "title": "Seguro de vida",
+        "text": "Respaldo económico para que tu familia mantenga su estabilidad si tú faltas.",
+        "points": [
+          "A término: cobertura por 10, 20 o 30 años",
+          "Gasto final: gastos funerarios y deudas pequeñas",
+          "IUL: protección con acumulación de valor en efectivo"
+        ],
+        "cta": "Cotizar seguro de vida",
+        "interest": "vida"
+      },
+      {
+        "id": "medicare",
+        "tag": "65 años o más",
+        "title": "Medicare",
+        "text": "Orientación para elegir o cambiar tu plan cuando cumples 65 años, o si calificas por otras condiciones.",
+        "points": [
+          "Medicare Advantage",
+          "Planes suplementarios",
+          "Planes de medicamentos (Parte D)"
+        ],
+        "noCarriers": "Te muestro los planes que represento en tu zona.",
+        "cta": "Hablar sobre Medicare",
+        "interest": "medicare"
+      }
+    ],
+    "extra": "¿Ya tienes seguro médico? También te oriento con planes <strong>dentales y de visión</strong> como complemento.",
+    "extraLink": "Pregúntame"
+  },
+  "porque": {
+    "eyebrow": "Por qué elegirme",
+    "title": "Claridad en cada paso, <em>sin presiones</em>.",
+    "text": "Estoy aquí para ayudarte a encontrar el plan de seguro que realmente se adapte a ti. Te explico cada opción con claridad y te acompaño en todo el proceso, sin presiones ni complicaciones. Cuento con la experiencia y el respaldo de varias aseguradoras para ofrecerte soluciones confiables y personalizadas.",
+    "stats": {
+      "families": "Familias protegidas",
+      "years": "Años de experiencia",
+      "states": "Estados donde atiendo",
+      "agents": "Agentes entrenados"
+    },
+    "licenseLabel": "Licencia",
+    "signatureRole": "Agente de seguros · Nexus Diamond Team",
+    "cta": "Habla conmigo",
+    "photoAlt": "Bernardo Castro explicando opciones de seguro a una clienta en su oficina"
+  },
+  "equipo": {
+    "eyebrow": "Únete al equipo",
+    "title": "Construye tu carrera en seguros con <em>respaldo</em> real.",
+    "text": "Forma parte de nuestro equipo y desarrolla tu carrera en el mundo de los seguros. Obtén capacitación, acompañamiento y herramientas digitales para crecer con confianza y ayudar a más personas.",
+    "items": [
+      {
+        "title": "Capacitación",
+        "text": "Formación práctica para empezar con bases sólidas."
+      },
+      {
+        "title": "Acompañamiento",
+        "text": "No estarás solo mientras ganas experiencia con clientes reales."
+      },
+      {
+        "title": "Herramientas digitales",
+        "text": "Recursos para organizar tu trabajo y hacer crecer tu cartera."
+      }
+    ],
+    "proof": "agentes ya entrenados",
+    "formTitle": "Aplica para unirte",
+    "formLead": "Bernardo revisa cada aplicación y te contacta personalmente.",
+    "licenseQ": "¿Tienes licencia de seguros?",
+    "licenseYes": "Sí",
+    "licenseNo": "No",
+    "licenseProgress": "En proceso",
+    "messagePh": "Cuéntame un poco sobre ti",
+    "submit": "Enviar aplicación",
+    "photoAlt": "Bernardo Castro en su oficina"
+  },
+  "testimonios": {
+    "eyebrow": "Testimonios",
+    "title": "Lo que dicen quienes ya <em>confiaron</em>.",
+    "insurance": "Seguro",
+    "disclaimer": "Experiencias individuales de clientes. Las opciones, los costos y los resultados varían en cada caso."
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Respuestas <em>claras</em>.",
+    "aside": "¿Tienes otra pregunta? Escríbeme y te respondo personalmente.",
+    "items": [
+      {
+        "q": "¿Qué cubre un seguro de salud?",
+        "a": "<p>Cubre gastos médicos, hospitalarios, consultas, medicamentos y exámenes, dependiendo del plan que elijas. Algunos también incluyen atención preventiva. Es una forma de contar con respaldo económico cuando necesitas cuidar de tu salud.</p>"
+      },
+      {
+        "q": "¿Qué es un seguro complementario?",
+        "a": "<p>Es una cobertura adicional que complementa tu seguro principal y te brinda respaldo económico ante gastos médicos o situaciones específicas que no están completamente cubiertas. Así puedes reducir los gastos de tu bolsillo y contar con mayor protección.</p>"
+      },
+      {
+        "q": "¿Qué es un seguro de vida y por qué debería tener uno?",
+        "a": "<p>Un seguro de vida es una herramienta de protección financiera que permite que tus seres queridos reciban un respaldo económico en caso de tu fallecimiento. Es una manera de proteger a tu familia, ayudar a mantener su estabilidad económica y brindarles tranquilidad en el futuro.</p>"
+      },
+      {
+        "q": "¿Qué tipos de seguros de vida existen?",
+        "a": "<h3>Seguros a término</h3><p>Ofrecen cobertura durante un periodo específico, generalmente de 10, 20 o 30 años. Si el asegurado fallece durante ese plazo, sus beneficiarios reciben el pago establecido en la póliza. Suelen ser una opción más económica que otros tipos de seguros de vida.</p><h3>Seguros de gasto final</h3><p>Están diseñados para ayudar a cubrir gastos funerarios, cremación, pequeñas deudas o gastos médicos finales. Son pólizas de montos más bajos, generalmente accesibles y con cobertura permanente.</p><h3>Seguros IUL (Indexed Universal Life)</h3><p>Son seguros de vida permanentes que combinan protección con un componente de ahorro cuyo crecimiento está vinculado a determinados índices del mercado. Permiten acumular valor en efectivo y tener la posibilidad de utilizarlo durante tu vida, según las condiciones de la póliza.</p>"
+      }
+    ]
+  },
+  "contacto": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de lo que <em>necesitas</em>.",
+    "lead": "Déjame tus datos y te contacto personalmente para revisar tus opciones. Sin costo y sin compromiso.",
+    "phone": "Teléfono",
+    "whatsapp": "WhatsApp",
+    "whatsappCta": "Escríbeme",
+    "email": "Email",
+    "office": "Oficina",
+    "hours": "Horario",
+    "hoursText": "Lunes a viernes: 8:00 a. m. – 7:00 p. m.<br>Sábado: 9:00 a. m. – 1:00 p. m.<br>Domingo: cerrado",
+    "mapLoad": "Ver en el mapa",
+    "mapNote": "Al abrir el mapa se cargará contenido de Google.",
+    "mapTitle": "Mapa de la oficina en Orlando",
+    "directions": "Cómo llegar",
+    "formTitle": "Solicita tu cotización",
+    "interest": "¿Qué te interesa?",
+    "interestPh": "Elige una opción",
+    "interestOptions": {
+      "salud": "Seguro de salud",
+      "vida": "Seguro de vida",
+      "medicare": "Medicare",
+      "dental": "Dental y visión",
+      "otro": "Otra consulta"
+    },
+    "messagePh": "¿Algo que deba saber?",
+    "submit": "Solicitar cotización gratis"
+  },
+  "form": {
+    "name": "Nombre completo",
+    "phone": "Teléfono",
+    "email": "Email",
+    "message": "Mensaje",
+    "required": "obligatorio",
+    "optional": "opcional",
+    "consent": "Acepto que Bernardo Castro y Nexus Diamond Team me contacten por llamada, mensaje de texto (SMS), WhatsApp o email al número y correo que proporcioné, incluso mediante sistemas automatizados, para darme información sobre seguros. Mi consentimiento no es una condición de compra. Pueden aplicarse tarifas de mensajes y datos. Puedo cancelar en cualquier momento respondiendo STOP.",
+    "consentLink": "Política de privacidad",
+    "errName": "Escribe tu nombre.",
+    "errPhone": "Escribe un teléfono de 10 dígitos.",
+    "errEmail": "Escribe un email válido, por ejemplo nombre@correo.com.",
+    "errSelect": "Elige una opción.",
+    "errConsent": "Necesitamos tu autorización para contactarte.",
+    "errSummary": "Revisa los campos marcados.",
+    "sending": "Enviando…",
+    "successTitle": "Gracias, {name}.",
+    "successText": "Recibí tus datos. Te contactaré personalmente muy pronto.",
+    "failTitle": "No se pudo enviar.",
+    "failText": "Llámame al {phone} o escríbeme por WhatsApp y te atiendo enseguida."
+  },
+  "cta": {
+    "title": "Tu tranquilidad empieza con una <em>conversación</em>.",
+    "text": "Cuéntame qué necesitas y comparamos opciones juntos."
+  },
+  "footer": {
+    "blurb": "Asesoría de seguros de salud, vida y Medicare para familias hispanas, desde Orlando para todo Estados Unidos.",
+    "navTitle": "Navegación",
+    "contactTitle": "Contacto",
+    "followTitle": "Sígueme",
+    "rights": "Todos los derechos reservados.",
+    "license": "Licencia",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "disclaimer": "La información de este sitio es general y no constituye asesoría legal ni fiscal. La cobertura, los precios y la elegibilidad dependen de cada aseguradora y de tu situación.",
+    "medicareGov": "No estamos conectados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare.",
+    "tpmo": "No ofrecemos todos los planes disponibles en tu área. Actualmente representamos <mark class=\"legal-field\">[N.º]</mark> organizaciones que ofrecen <mark class=\"legal-field\">[N.º]</mark> productos en tu área. Comunícate con Medicare.gov, 1-800-MEDICARE o con tu Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) para obtener información sobre todas tus opciones."
+  },
+  "chat": {
+    "launcher": "¿Tienes preguntas?",
+    "title": "Asistente de Bernardo",
+    "subtitle": "Dudas generales sobre seguros",
+    "close": "Cerrar el chat",
+    "greeting": "Hola, soy el asistente de Bernardo. ¿En qué te puedo ayudar hoy?",
+    "quick": [
+      "Quiero cotizar",
+      "¿Qué cubre un seguro de salud?",
+      "Hablar con Bernardo"
+    ],
+    "placeholder": "Escribe tu pregunta…",
+    "send": "Enviar",
+    "typing": "Escribiendo…",
+    "offline": "Por ahora el asistente está en preparación. Para atenderte de inmediato, llama a Bernardo o escríbele por WhatsApp.",
+    "quoteReply": "Con gusto. Completa el formulario de cotización y Bernardo te contacta personalmente.",
+    "quoteBtn": "Ir al formulario",
+    "callBtn": "Llamar",
+    "waBtn": "WhatsApp",
+    "error": "No pude responder en este momento. Puedes llamar o escribir por WhatsApp.",
+    "disclaimer": "Respuestas automáticas e informativas. No reemplazan la asesoría de un agente."
+  },
+  "wa": "Hola Bernardo, quisiera información sobre un seguro.",
+  "status": {
+    "open": "Disponible ahora",
+    "until": "hasta las {t}",
+    "closed": "Fuera de horario",
+    "opens": "abre {d} a las {t}",
+    "today": "hoy",
+    "tomorrow": "mañana",
+    "days": [
+      "domingo",
+      "lunes",
+      "martes",
+      "miércoles",
+      "jueves",
+      "viernes",
+      "sábado"
+    ]
+  },
+  "legal": {
+    "back": "Volver al inicio",
+    "draftNote": "Borrador pendiente de revisión legal. Los campos <mark class=\"legal-field\">resaltados</mark> deben completarse antes de publicar."
+  }
+}
